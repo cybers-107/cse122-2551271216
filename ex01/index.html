@@ -5,36 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bốn mùa</title>
   <style>
-    /* Khai báo biến màu dùng chung cho toàn trang */
     :root {
-      --nen-khung: #FFFDE7;   /* Màu nền vàng nhạt của khung thơ */
-      --vien: #9E9E9E;        /* Màu viền xám của khung */
-      --do: #D40000;          /* Màu đỏ: tiêu đề và khổ 2 */
-      --xanh: #0033CC;        /* Màu xanh dương: khổ 1, khổ 3 và đường kẻ */
-      --nen-tieu-de: #FFD9E6; /* Màu nền hồng phấn của tiêu đề */
+      --nen-khung: #FFFDE7;
+      --vien: #9E9E9E;
+      --do: #D40000;
+      --xanh: #0033CC;
+      --nen-tieu-de: #FFD9E6;
     }
 
-    /* Dùng Flexbox căn giữa khung thơ theo cả hai chiều */
     body {
       display: flex;
-      justify-content: center; /* Căn giữa theo chiều ngang */
-      align-items: center;     /* Căn giữa theo chiều dọc */
-      min-height: 100vh;       /* Cao tối thiểu bằng màn hình */
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
       margin: 0;
     }
 
-    /* Khung chữ nhật bao quanh toàn bộ bài thơ */
     .khung-tho {
       background: var(--nen-khung);
       border: 1px solid var(--vien);
-      width: 640px;          /* Chiều rộng cố định trên màn hình lớn */
-      max-width: 100%;       /* Co lại vừa màn hình nhỏ */
+      width: 640px;
+      max-width: 100%;
       padding: 24px;
       text-align: center;
-      box-sizing: border-box; /* Padding và viền tính vào width 640px */
+      box-sizing: border-box;
     }
 
-    /* Tiêu đề: chữ đỏ in đậm trên dải nền hồng phấn */
     h1 {
       text-transform: uppercase;
       color: var(--do);
@@ -46,59 +42,48 @@
       text-align: center;
     }
 
-    /* Định dạng chung cho cả ba khổ thơ: in nghiêng, giãn dòng */
     .kho {
       font-style: italic;
       line-height: 1.7;
       text-align: center;
     }
 
-    /* Khổ 1 và khổ 3: chữ màu xanh dương */
     .xanh {
       color: var(--xanh);
     }
 
-    /* Khổ 2: tái dùng .kho, chỉ đổi màu chữ sang đỏ */
     .do {
       color: var(--do);
     }
 
-    /* Đường kẻ ngang xanh, rộng 55% khung, ngăn cách các khổ */
     hr {
       width: 55%;
-      margin: 16px auto; /* auto hai bên để căn giữa */
-      border: none;      /* Bỏ viền mặc định của hr */
+      margin: 16px auto;
+      border: none;
       border-top: 1px solid var(--xanh);
     }
   </style>
 </head>
 <body>
-  <!-- Toàn bộ bài thơ nằm trong một khung article -->
   <article class="khung-tho">
-    <!-- Tiêu đề bài thơ -->
     <h1>BỐN MÙA</h1>
 
-    <!-- Khổ 1: chữ xanh, các câu ngắt dòng bằng thẻ br -->
     <p class="kho xanh">
       Xuân về hoa nở khắp trời<br>
       Hạ sang nắng cháy rạng ngời phố quen<br>
       Thu về lá rụng bên thềm
     </p>
 
-    <!-- Đường kẻ ngang thứ nhất -->
     <hr>
 
-    <!-- Khổ 2: chữ đỏ -->
     <p class="kho do">
       Đông sang gió lạnh bên em đợi chờ<br>
       Bốn mùa là bốn giấc mơ<br>
       Thời gian đi mãi ta chờ đợi ai
     </p>
 
-    <!-- Đường kẻ ngang thứ hai -->
     <hr>
 
-    <!-- Khổ 3: chữ xanh -->
     <p class="kho xanh">
       Một năm rồi lại một năm<br>
       Vẫn còn câu hát thì thầm quê hương<br>
